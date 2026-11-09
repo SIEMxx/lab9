@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - test
 
 jobs:
   lab9-basic-tests:
@@ -19,5 +20,5 @@ jobs:
       - name: Test 2
         run: test "$(bash validate-data.sh "siemestifanos" "087474747474747")" = "FAIL"
 
-      - name: Test 3
-        run: test "$(bash validate-data.sh "VeryLongNameExample" "0874747474")" = "FAIL"
+            - name: Test 3
+        run: test "$(bash validate-data.sh "ThisNameIsDefinitelyTooLong" "0874747474")" = "FAIL"
